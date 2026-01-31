@@ -6,10 +6,15 @@
     <title>Title</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/index.css" />
-    <script type="module" src="./js/index.js" defer></script>
+    <script src="./js/imask.js" defer></script>
+    <script src="./js/index.js" defer></script>
   </head>
 
   <body>
+    <div style="margin: 24px auto; text-align: center">
+      <button class="auth-button">Войти</button>
+    </div>
+
     <div class="disclaimer-modal active">
       <div class="disclaimer-modal__body">
         <div class="disclaimer-modal__content">
@@ -22,6 +27,136 @@
 
           <div class="disclaimer-modal__confirm">
             <button class="disclaimer-modal__confirm-button">Мне исполнилось 18 лет</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-modal">
+      <div class="auth-modal__body">
+        <div class="auth-modal__title">Личный кабинет</div>
+
+        <div class="auth-modal__content">
+          <div class="auth-modal__nav">
+            <button class="auth-modal__nav-button" data-target="login">Вход</button>
+            <button class="auth-modal__nav-button" data-target="register">Регистрация</button>
+          </div>
+
+          <div class="auth-modal__main">
+            <div class="auth-modal__main-block" data-block="login">
+              <form class="auth-modal__form">
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Ваш номер телефона</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (999) 999-99-99"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Ваш пароль</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="text"
+                    name="password"
+                    placeholder="Пароль"
+                    required
+                  />
+                </label>
+
+                <div class="auth-modal__form-submit">
+                  <button class="auth-modal__form-submit-button">Отправить</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="auth-modal__main-block" data-block="register">
+              <form class="auth-modal__form">
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Ваше имя</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="text"
+                    name="name"
+                    placeholder="Имя"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Ваша фамилия</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="text"
+                    name="surname"
+                    placeholder="Фамилия"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Ваш номер телефона</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 (999) 999-99-99"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Ваш пароль</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="text"
+                    name="password"
+                    placeholder="Пароль"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-control">
+                  <div class="auth-modal__form-control-label">Подтвердите пароль</div>
+                  <input
+                    class="auth-modal__form-control-input"
+                    type="text"
+                    name="passwordConfirm"
+                    placeholder="Пароль"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-checkbox">
+                  <div class="auth-modal__form-checkbox-label">
+                    Согласие на обработку персональных данных
+                  </div>
+                  <input
+                    class="auth-modal__form-checkbox-input"
+                    type="checkbox"
+                    name="agreementAds"
+                    required
+                  />
+                </label>
+
+                <label class="auth-modal__form-checkbox">
+                  <div class="auth-modal__form-checkbox-label">Согласие на рекламную рассылку</div>
+                  <input
+                    class="auth-modal__form-checkbox-input"
+                    type="checkbox"
+                    name="agreementAds"
+                    required
+                  />
+                </label>
+
+                <div class="auth-modal__form-submit">
+                  <button class="auth-modal__form-submit-button">Отправить</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
