@@ -1,6 +1,72 @@
+@font-face {
+  font-family: 'Behrens Antiqua—';
+  src: url('../fonts/Behrens-AntiquaC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dihjauti';
+  src: url('../fonts/Dihjauti-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dihjauti';
+  src: url('../fonts/Dihjauti-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src:
+    url('../fonts/gillsansnova-book.woff2') format('woff2'),
+    url('../fonts/gillsansnova-book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src:
+    url('../fonts/gillsansnova-medium.woff2') format('woff2'),
+    url('../fonts/gillsansnova-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src:
+    url('../fonts/gillsansnova-bold.woff2') format('woff2'),
+    url('../fonts/gillsansnova-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src:
+    url('../fonts/gillsansnova-extrabold.woff2') format('woff2'),
+    url('../fonts/gillsansnova-extrabold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gill Sans Nova';
+  src:
+    url('../fonts/gillsansnova-heavy.woff2') format('woff2'),
+    url('../fonts/gillsansnova-heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
 html {
   font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gill Sans Nova', sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;

@@ -1,6 +1,55 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Behrens Antiqua—";
+  src: url("../fonts/Behrens-AntiquaC.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dihjauti";
+  src: url("../fonts/Dihjauti-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Dihjauti";
+  src: url("../fonts/Dihjauti-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans Nova";
+  src: url("../fonts/gillsansnova-book.woff2") format("woff2"), url("../fonts/gillsansnova-book.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans Nova";
+  src: url("../fonts/gillsansnova-medium.woff2") format("woff2"), url("../fonts/gillsansnova-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans Nova";
+  src: url("../fonts/gillsansnova-bold.woff2") format("woff2"), url("../fonts/gillsansnova-bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans Nova";
+  src: url("../fonts/gillsansnova-extrabold.woff2") format("woff2"), url("../fonts/gillsansnova-extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans Nova";
+  src: url("../fonts/gillsansnova-heavy.woff2") format("woff2"), url("../fonts/gillsansnova-heavy.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+}
 html {
   font-size: 16px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Gill Sans Nova", sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -12,4 +61,130 @@ body {
   overflow-y: scroll;
   color: #000000;
   background-color: #ffffff;
+}
+
+.disclaimer-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+}
+.disclaimer-modal.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: all;
+}
+.disclaimer-modal__body {
+  display: block;
+  max-width: calc(100dvw - 24px);
+  max-height: calc(100dvh - 24px);
+  width: 600px;
+  padding: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fbfbfb;
+}
+@media (max-width: 576px) {
+  .disclaimer-modal__body {
+    padding: 24px;
+  }
+}
+.disclaimer-modal__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  max-height: calc(100dvh - 64px - 24px);
+  overflow: auto;
+}
+@media (max-width: 576px) {
+  .disclaimer-modal__content {
+    gap: 16px;
+    max-height: calc(100dvh - 48px - 24px);
+  }
+}
+.disclaimer-modal__age {
+  margin: 0;
+  font-family: "Behrens Antiqua—", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  color: #780d00;
+}
+@media (max-width: 576px) {
+  .disclaimer-modal__age {
+    font-size: 40px;
+  }
+}
+.disclaimer-modal__title {
+  margin: 0;
+  font-family: "Gill Sans Nova", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: #060606;
+}
+@media (max-width: 576px) {
+  .disclaimer-modal__title {
+    font-size: 16px;
+  }
+}
+.disclaimer-modal__confirm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.disclaimer-modal__confirm-button {
+  display: inline-block;
+  padding: 14px 24px 12px;
+  font-family: "Dihjauti", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  border: none;
+  border-radius: 4px;
+  background-color: #2d030b;
+  -webkit-transition: background-color ease-out 0.2s;
+  transition: background-color ease-out 0.2s;
+  cursor: pointer;
+}
+.disclaimer-modal__confirm-button:hover {
+  background-color: #370610;
+}
+.disclaimer-modal__confirm-button:active {
+  background-color: #450813;
 }
